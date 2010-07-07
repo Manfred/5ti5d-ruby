@@ -11,12 +11,20 @@ headers = {}
 
 # Split the input by its newlines and loop through them
 input.split("\n").each do |line|
+  
   # Split a line by the semicolon
   parts = line.split(":")
   
-  # Use the downcased header name as the key and set its
-  # value. Strip the whitespace off the value.
-  headers[parts[0].downcase] = parts[1..-1].join(":").strip
+  # Downcase the header name so they're always uniform
+  header_name = parts[0].downcase
+  
+  # The value can include semicolons like in the date
+  # value, therefor we need to re-join the parts.
+  # We also strip off all the whitespace.
+  header_value = parts[1..-1].join(":").strip
+  
+  # Now assign them to the header hash.
+  headers[header_name] = header_value
 end
 
 # Print the result to the terminal
