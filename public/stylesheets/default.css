@@ -1,0 +1,66 @@
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, font, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, button, legend, table, caption, tbody, tfoot, thead, tr, th, td { margin: 0; padding: 0; border: 0; outline: 0; font-size: 100%; vertical-align: baseline; background: transparent; }
+body { line-height: 1; margin: 0; padding: 0; }
+ol, ul { list-style: none; }
+blockquote, q { quotes: none; }
+blockquote:before, blockquote:after, q:before, q:after { content: ''; content: none; }
+:focus { outline: 0; }
+ins { text-decoration: none; }
+del { text-decoration: line-through; }
+table { border-collapse: collapse; border-spacing: 0; }
+hr { height: 1px; background-color: #000; border: none; }
+body, 
+input,
+textarea { font: 14px/1.5 "LucidaGrande", "Lucida Grande", "Lucida Sans Unicode", lucida, sans-serif; }
+pre { font: 14px/1.5 "Menlo", "Consolas", serif; }
+
+/* Layout */
+
+h1 { font-size: 200%; margin: 56px 0 28px 0; }
+h2 { font-size: 150%; margin: 28px 0 14px 0; }
+h3 { font-size: 120%; margin: 28px 0 14px 0; }
+h4 { margin: 14px 0 7px 0; }
+
+#container
+{
+  margin: 14px 56px;
+}
+
+/* Columns */
+
+.columns-2
+{
+  width: 810px;
+}
+.columns-2 .column
+{
+  float: left;
+  width: 400px;
+}
+.columns-2 .column+.column
+{
+  margin-left: 10px;
+}
+
+/* Code */
+
+.code
+{
+  margin: 28px 0;
+  border-top: 1px solid #eee;
+  border-bottom: 1px solid #eee;
+}
+
+pre
+{
+  padding: 28px 0;
+}
+code
+{
+  color: #440;
+}
+
+/* Misc */
+.clear
+{
+  clear: both;
+}

@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>Ruby · Vijf Talen in Vijf Dagen</title>
+    <link href="stylesheets/default.css" media="all" rel="stylesheet" type="text/css" />
+  </head>
+  <body>
+    <div id="container"><div id="inner">
+      <h2>Exercises</h2>
+      
+      <h3>Parsing HTTP headers</h3>
+      
+      <p>
+        The goal of this exercise is to parse the headers provided in the examples directory. There
+        are three parts to this exercise, you're free to choose any of the parts or complete them
+        all. There are also some bonus tasks if you feel like doing a bit more. You can find files
+        relevant to these exercises in <tt>exercises/parsing-http-headers</tt>.
+      </p>
+      
+      <h4>Part 1: Parsing</h4>
+      
+      <p>
+        Parse the input shown on the left and try to generate the Ruby hash shown on the right.
+      </p>
+      
+      <div class="columns-2 code">
+        <div class="column"><pre><code>Date: Sun, 25 Apr 2010 12:17:38 GMT
+Server: Apache/2.2.14 (Unix)
+Content-Length: 44
+Content-Type: text/html</code></pre></div>
+        <div class="column"><pre><code>{
+  'date' => 'Sun, 25 Apr 2010 12:17:38 GMT',
+  'server' => 'Apache/2.2.14 (Unix)',
+  'content-length' => '44',
+  'content-type' => 'text/html'
+}</code></pre></div>
+        <div class="clear"></div>
+      </div>
+      
+      <h4>Part 2: Reading from a file</h4>
+      
+      <p>
+        In the <tt>test/examples</tt> directory you can find a number
+        of files with examples of HTTP headers. Figure out how to read these files from disk and
+        parse them. In <tt>test/expected</tt> you can find files with the same names. These files
+        contain the ‘solutions’.
+      </p>
+      
+      <h4>Part 3: Respecting types</h4>
+      
+      <p>
+        The header values are currently all strings. It would be great is they were cast into
+        object with a more fitting class. For instance, the ‘date’ header could be a Time object.
+        Figure out how to automatically cast all the header values.
+      </p>
+      
+      <div class="columns-2 code">
+        <div class="column"><pre><code>Date: Sun, 25 Apr 2010 12:17:38 GMT
+Server: Apache/2.2.14 (Unix)
+Content-Length: 44
+Content-Type: text/html</code></pre></div>
+        <div class="column"><pre><code>{
+  'date' => Time.utc(2010, 3, 25, 12, 17, 38),
+  'server' => 'Apache/2.2.14 (Unix)',
+  'content-length' => 44,
+  'content-type' => 'text/html'
+}</code></pre></div>
+        <div class="clear"></div>
+      </div>
+      
+      <p>
+        You can either look at the examples or you can find out all possible header values from the
+        HTTP 1.1 RFC. The relevant sections are
+        <a href="http://www.w3.org/Protocols/rfc2616/rfc2616-sec4.html#sec4.5">General Header Fields</a>,
+        <a href="http://www.w3.org/Protocols/rfc2616/rfc2616-sec5.html#sec5.3">Request Header Fields</a>,
+        <a href="http://www.w3.org/Protocols/rfc2616/rfc2616-sec6.html#sec6.2">Response Header Fields</a>
+      </p>
+      
+      <h4>Bonus 1: Status line</h4>
+      
+      <p>
+        The supplied headers are in fact only part of the complete HTTP request or response. Find a
+        way to also parse the status line contained in the examples and come up with a nice way to
+        store them. Maybe you can define a <code>Request</code> or <code>Response</code> class?
+      </p>
+      
+      <h4>Bonus 2: Writing unit tests</h4>
+      
+      <p>
+        For extra bonus points you can try to write automated tests for your code using the examples
+        and solutions. There is a short article over at Wikibooks about
+        <a href="http://en.wikibooks.org/wiki/Ruby_Programming/Unit_testing">testing Ruby with test/unit</a>.
+      </p>
+    </div></div>
+  </body>
+</html>
