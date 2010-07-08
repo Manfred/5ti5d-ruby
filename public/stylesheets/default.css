@@ -10,15 +10,15 @@ table { border-collapse: collapse; border-spacing: 0; }
 hr { height: 1px; background-color: #000; border: none; }
 body, 
 input,
-textarea { font: 14px/1.5 "LucidaGrande", "Lucida Grande", "Lucida Sans Unicode", lucida, sans-serif; }
+textarea { font: 16px/2.0 "LucidaGrande", "Lucida Grande", "Lucida Sans Unicode", lucida, sans-serif; }
 pre { font: 14px/1.5 "Menlo", "Consolas", serif; }
 
 /* Layout */
 
-h1 { font-size: 200%; margin: 56px 0 28px 0; }
-h2 { font-size: 150%; margin: 28px 0 14px 0; }
-h3 { font-size: 120%; margin: 28px 0 14px 0; }
-h4 { margin: 14px 0 7px 0; }
+h1 { font-size: 300%; margin: 56px 0 28px 0; }
+h2 { font-size: 200%; margin: 28px 0 14px 0; }
+h3 { font-size: 200%; margin: 28px 0 14px 0; }
+h4 { font-size: 150%; margin: 14px 0 7px 0; }
 
 #container
 {
