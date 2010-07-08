@@ -1,0 +1,10 @@
+HTTP/1.1 200 OK
+Date: Thu, 08 Jul 2010 18:20:04 GMT
+Expires: -1
+Cache-Control: private, max-age=0
+Content-Type: text/html; charset=ISO-8859-1
+Set-Cookie: PREF=ID=b42c79bda3f13502:TM=1278613204:LM=1278613204:S=4yP7ogI0plENWIGx; expires=Sat, 07-Jul-2012 18:20:04 GMT; path=/; domain=.google.nl
+Set-Cookie: NID=36=pk2YnFNA7LldbPkofO8kPU4PfGg2ODKj432OSPnHA-BfenZOFCQ56oQmrXLMZSyznQ6pipap4KAGJUqCOh1eCKPtKCg2TjRWu3AtJLa8Sbm5-3IKtJUb-ZEEsg5m07M-; expires=Fri, 07-Jan-2011 18:20:04 GMT; path=/; domain=.google.nl; HttpOnly
+Server: gws
+X-XSS-Protection: 1; mode=block
+Transfer-Encoding: chunked
