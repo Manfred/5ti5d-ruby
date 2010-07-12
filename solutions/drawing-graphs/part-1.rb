@@ -5,5 +5,5 @@ data_filename = File.expand_path('../../../exercises/drawing-graphs/test/example
 input = File.read(data_filename)
 data  = input.split("\n").map { |line| line.to_i }
 
-# And print the parsed headers to the terminal.
+# And print the parsed values to the terminal.
 p data

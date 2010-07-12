@@ -19,7 +19,7 @@ input.split("\n").each do |line|
   header_name = parts[0].downcase
   
   # The value can include semicolons like in the date
-  # value, therefor we need to re-join the parts.
+  # value, therefore we need to re-join the parts.
   # We also strip off all the whitespace.
   header_value = parts[1..-1].join(":").strip
   

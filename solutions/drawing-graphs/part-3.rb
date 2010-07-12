@@ -8,8 +8,8 @@ def render_data(data, image_filename)
   # The y-coordinate of the center is 32
   center = 32
   
-  # Loop over all the data together with the index of the data
-  # we use the the index as the x-coordinate
+  # Loop over all the data. We use the index of the values
+  # as the x-coordinate.
   data.each_with_index do |value, x|
     
     # Scale the values so they fit in our image
