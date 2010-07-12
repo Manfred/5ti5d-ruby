@@ -45,16 +45,15 @@ Content-Type: text/html</code></pre></div>
       <h4>1.2. Reading from a file</h4>
       
       <p>
-        In the <tt>test/examples</tt> directory you can find a number
-        of files with examples of HTTP headers. Figure out how to read these files from disk and
-        parse them. In <tt>test/expected</tt> you can find files with the same names. These files
-        contain the ‘solutions’.
+        In the <tt>examples</tt> directory you can find a number of files with examples of HTTP
+        headers. Figure out how to read these files from disk and parse them. In <tt>expected</tt>
+        you can find files with the same names. These files contain the ‘solutions’.
       </p>
       
       <h4>1.3. Respecting types</h4>
       
       <p>
-        The header values are currently all strings. It would be great if they were cast into
+        The header values are currently all strings. The assignment is to convert them to
         objects with a more fitting class. For instance, the ‘date’ header could be a Time object.
         Figure out how to automatically cast all the header values.
       </p>
@@ -100,23 +99,23 @@ Content-Type: text/html</code></pre></div>
       <h3>2. Drawing graphs</h3>
       
       <p>
-        In this exercise we want you to draw graphs using a PNG library. You can find the data
-        files for this exercise in  <tt>exercises/drawing-graphs</tt>.
+        In this exercise the goal is to draw graphs using a PNG library. You can find the data
+        files for this exercise in the <tt>drawing-graphs</tt> directory.
       </p>
       
       <h4>2.1. Reading data files</h4>
       
       <p>
-        The data files for this exercise contain integer values. We want you to read these values
-        from the files and store them as integers in an array.
+        The data files for this exercise contain integer values. Read these values from the files
+        and store them as integers in an array.
       </p>
       
       <h4>2.2. Drawing lines on a canvas</h4>
       
       <p>
-        In this part of the exercise we would like you to create a 64 by 65 pixel PNG image with
-        a black background and a white line in the center. Basically the one you see below this
-        paragraph.
+        Use the PNG library and create an image of 64 by 65 pixels. The image should have a black
+        background and a white line running through the center from left to right. It should look
+        like the image below.
       </p>
       
       <p><img src="images/drawing-graphs-line.png"></p>
@@ -124,9 +123,8 @@ Content-Type: text/html</code></pre></div>
       <h4>2.3. Drawing the values from the data file as a bar graph</h4>
       
       <p>
-        Finally we want to render the values read from the data files as a bar graph into a PNG.
-        If you want a challenge try to fit the values in the 64 by 65 pixel image you created in
-        the previous part of the exercise.
+        Render the values read from the data files as a bar graph into a PNG. Fit the values in
+        the 64 by 65 pixel image you created in the previous part of the exercise.
       </p>
       
       <p><img src="images/drawing-graphs-solution.png"></p>
