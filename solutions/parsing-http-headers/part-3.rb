@@ -1,6 +1,7 @@
 # encoding: utf-8
 
 require 'time'
+require 'pp'
 
 # Define a hash with the header names and their types
 HEADERS_TYPE_MAP = {
@@ -22,7 +23,7 @@ def type_cast(header_name, header_value)
   when nil
     # When we don't want to do anything special with the header we just
     # pass it along.
-    header_value
+    header_value.strip
   else
     # Raise an argument error when we defined a type in the type map which
     # we can't handle.
@@ -32,11 +33,9 @@ end
 
 def parse_headers(input)
   input.split("\n").inject({}) do |headers, line|
-    parts = line.split(":")
-    if parts.length > 1
-      header_name = parts[0].downcase
-      header_value = parts[1..-1].join(':').strip
-      
+    header_name, header_value = line.split(":", 2)
+    unless header_value.nil?
+      header_name = header_name.downcase
       # Instead of directory assigning the value we now first type-cast it
       headers[header_name] = type_cast(header_name, header_value)
     end
@@ -44,12 +43,10 @@ def parse_headers(input)
   end
 end
 
-examples_directory = File.expand_path('../../../exercises/parsing-http-headers/test/examples', __FILE__)
+examples_directory = File.expand_path('../../../exercises/parsing-http-headers/examples', __FILE__)
 
-Dir.entries(examples_directory).each do |name|
-  if name =~ /\.txt$/
-    input = File.read(File.join(examples_directory, name))
-    puts name
-    p parse_headers(input)
-  end
+Dir.glob(File.join(examples_directory, '*.txt')).each do |filename|
+  puts
+  puts File.basename(filename)
+  pp parse_headers(File.read(filename))
 end
