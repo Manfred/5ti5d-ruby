@@ -13,7 +13,7 @@ headers = {}
 input.split("\n").each do |line|
   
   # Split a line by the semicolon
-  parts = line.split(":")
+  parts = line.split(":", 2)
   
   # Downcase the header name so they're always uniform
   header_name = parts[0].downcase
@@ -21,11 +21,12 @@ input.split("\n").each do |line|
   # The value can include semicolons like in the date
   # value, therefore we need to re-join the parts.
   # We also strip off all the whitespace.
-  header_value = parts[1..-1].join(":").strip
+  header_value = parts[1].strip
   
   # Now assign them to the header hash.
   headers[header_name] = header_value
 end
 
-# Print the result to the terminal
-p headers
+# Pretty print the result to the terminal
+require 'pp'
+pp headers
