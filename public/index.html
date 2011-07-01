@@ -103,18 +103,22 @@ Content-Type: text/html</code></pre></div>
         files for this exercise in the <tt>drawing-graphs</tt> directory.
       </p>
       
-      <p>
-        Install the <tt>png</tt> and <tt>RubyInline</tt> libraries, preferably with Rubygems.
-      </p>
-      
-      <pre><code>$ gem install png
-$ gem install RubyInline</code></pre>
-      
-      <p>
-        Or otherwise install from source:
-        <a href="http://rubyforge.org/frs/download.php/59204/png-1.2.0.tgz">png-1.2.0.tgz</a>, 
-        <a href="http://rubyforge.org/frs/download.php/67845/RubyInline-3.8.4.tgz">RubyInline-3.8.4.tgz</a>
-      </p>
+      <div class="help">
+        <p>
+          Install the <tt>chunky_png</tt> library, preferably with Rubygems.
+        </p>
+        
+        <pre><code>$ gem install chunky_png</code></pre>
+        
+        <p>
+          Or otherwise install from source:
+          <a href="https://github.com/wvanbergen/chunky_png/tarball/master">Chunky PNG source</a>.
+        </p>
+        
+        <p>
+          Documentation for Chunky PNG can be found on its <a href="https://github.com/wvanbergen/chunky_png/wiki">GitHub wiki</a> or in the <a href="http://rdoc.info/gems/chunky_png/1.2.0/ChunkyPNG">RDoc documentation</a>.
+        </p>
+      </div>
       
       <h4>2.1. Reading data files</h4>
       
@@ -142,10 +146,10 @@ $ gem install RubyInline</code></pre>
       
       <p><img src="images/drawing-graphs-solution.png"></p>
       
-      <h4>2.4. Bonus: Rendering an actual sinus</h4>
+      <h4>2.4. Bonus: Rendering an actual sine</h4>
       
       <p>
-        For extra points try to render a sinusoid using a sinus function on a larger image.
+        For extra points try to render a sine using a sine function on a larger image.
       </p>
       
       <h4>2.5. Bonus: Writing unit tests</h4>

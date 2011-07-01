@@ -57,6 +57,14 @@ code
 }
 
 /* Misc */
+
+.help
+{
+  border: 1px solid #ddd;
+  background-color: #eee;
+  padding: 0 14px 14px 14px;
+  margin-top: 14px;
+}
 .clear
 {
   clear: both;
