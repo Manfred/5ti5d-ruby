@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>Vijf Talen in Vijf Dagen</title>
+    <style>
+      body, 
+      input,
+      textarea { font: 16px/2.0 "LucidaGrande", "Lucida Grande", "Lucida Sans Unicode", lucida, sans-serif; }
+      pre { font: 14px/1.5 "Menlo", "Consolas", serif; }
+      body {
+        padding: 14px;
+      }
+      label {
+        font-weight: bold;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Vijf Talen in Vijf Dagen</h1>
+    <p>
+      What do you think about the course so far? What's your favorite part
+      of the course and what's your least favorite?
+    </p>
+    <form action="/" method="post">
+      <div>
+        <div><label for="member_body">Your message</label></div>
+        <textarea type="text" body="member[body]" id="member_body" cols="30" rows="3"><%= @message.body %></textarea>
+      </div>
+      <div>
+        <input type="submit" value="Post">
+      </div>
+    </form>
+  </body>
+</html>

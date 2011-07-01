@@ -162,22 +162,48 @@ Content-Type: text/html</code></pre></div>
       <h3>3. Web app</h3>
       
       <p>
-        In the last exercise we will write a small web app. You're welcome to use anything to
-        accomplish this. A few possible projects of interest are: <a href="http://rack.rubyforge.org/">Rack</a>, <a href="http://rubyonrails.org/">Ruby on Rails</a>, <a href="http://ramaze.net/">Ramaze</a>, and <a href="http://www.sinatrarb.com/">Sinatra</a>.
+        In the last exercise we will write a small web app. The web app will allow visitors to
+        post a short opinion about the course.
+      </p>
+      
+      <p>You're welcome to use anything to accomplish this. A few possible projects of interest
+        are: <a href="http://rack.rubyforge.org/">Rack</a>,
+        <a href="http://rubyonrails.org/">Ruby on Rails</a>,
+        <a href="http://ramaze.net/">Ramaze</a>,
+        and <a href="http://www.sinatrarb.com/">Sinatra</a>.
       </p>
       
       <p>
         If you don't want to choose, you should probably pick Sinatra. It's easiest to learn. The
         <a href="http://www.sinatrarb.com/intro">Sinatra intro</a> explains how to install it.
+        It's also a quick way to learn Sinatra.
       </p>
       
-      <h4>3.1 Rendering a frontpage</h4>
+      <h4>3.1. Rendering a frontpage</h4>
       
       <p>
         Render a frontpage with a title when someone visits your website on the root <code>/</code>.
       </p>
       
+      <p><img src="images/wa-part-1.png"></p>
       
+      <h4>3.2. Adding a form</h4>
+      
+      <p>
+        Add a form to the homepage that allows visitors to type their message. Save the message
+        sent by people and store them in a database. The easiest way to set up a database is
+        to probably to use
+        <a href="http://sinatra-book.gittr.com/#datamapper">Datamapper with a Sqlite3 backend</a>.
+        Alternatively you can use your favorite search engine to find alternatives and install
+        instructions.
+      </p>
+      
+      <div class="help">
+        <p></p>
+        <pre><code>$ gem install datamapper dm-sqlite-adapter</code></pre>
+      </div>
+      
+      <p><img src="images/wa-part-2.png"></p>
     </div></div>
   </body>
 </html>
