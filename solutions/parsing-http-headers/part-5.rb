@@ -24,7 +24,7 @@ class ResponseTest < Test::Unit::TestCase
   def examples
     examples_directory = File.expand_path('../../../exercises/parsing-http-headers/examples', __FILE__)
     Dir.glob(File.join(examples_directory, '*.txt')).each do |example_file|
-      expected_file = File.expand_path("../../expected/#{File.basename(example_file)}", example_file)
+      expected_file = File.expand_path("../../expected/#{File.basename(example_file, '.txt')}.rb", example_file)
       yield [File.read(example_file), eval(File.read(expected_file))]
     end
   end
