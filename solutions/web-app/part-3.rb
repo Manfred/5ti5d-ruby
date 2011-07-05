@@ -4,9 +4,9 @@ require 'erb'
 require 'datamapper'
 
 configure do
-  set :views, File.expand_path('../templates-part-2', __FILE__)
+  set :views, File.expand_path('../templates-part-3', __FILE__)
   
-  DataMapper::setup(:default, "sqlite3://#{File.expand_path('../part-2.db', __FILE__)}")
+  DataMapper::setup(:default, "sqlite3://#{File.expand_path('../part-3.db', __FILE__)}")
 end
 
 class Message
@@ -16,10 +16,12 @@ class Message
   property :created_at, DateTime
 end
 
-Message.auto_migrate!
+DataMapper.finalize
+DataMapper.auto_upgrade!
 
 get '/' do
   @message = Message.new
+  @messages = Message.all(:order => [:created_at.desc])
   erb :index
 end
 

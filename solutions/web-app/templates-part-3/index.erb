@@ -31,5 +31,11 @@
         <input type="submit" value="Post">
       </div>
     </form>
+    <% @messages.each do |message| %>
+    <div class="message">
+      <p class="date"><%= message.created_at.strftime("%d") %></p>
+      <p class="body"><%=escape_html message.body %></p>
+    </div>
+    <% end %>
   </body>
 </html>
