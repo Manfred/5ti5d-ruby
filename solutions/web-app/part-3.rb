@@ -27,9 +27,6 @@ end
 
 post '/' do
   @message = Message.new(params[:message])
-  if @message.save
-    redirect to('/')
-  else
-    erb :index
-  end
+  @message.save
+  redirect to('/')
 end

@@ -1,11 +1,17 @@
 require File.expand_path('../part-4', __FILE__)
 
+# The test/unit library is the standard Ruby unit testing library
 require 'test/unit'
+# Rack/test is a general purpose testing framework for web frameworks based
+# on Rack
 require 'rack/test'
 
+# Make sure we run in test environment
 ENV['RACK_ENV'] = 'test'
 
 class MessageTest < Test::Unit::TestCase
+  # Rack::Test::Methods includes important helper methods
+  # like get, post, last_response, etc.
   include Rack::Test::Methods
   
   def app

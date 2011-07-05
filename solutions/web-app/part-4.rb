@@ -29,8 +29,10 @@ end
 
 post '/' do
   @message = Message.new(params[:message])
+  # When validations fail, save returns false
   if @message.save
     redirect to('/')
+  # Render the frontpage with errors when there are validation messages
   else
     erb :index
   end
