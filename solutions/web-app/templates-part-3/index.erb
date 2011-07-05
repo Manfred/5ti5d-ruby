@@ -14,6 +14,18 @@
       label {
         font-weight: bold;
       }
+      p.date
+      {
+        font-size: 70%;
+        color: #444;
+        margin: 0;
+      }
+      p.body
+      {
+        border-top: 1px dashed #999;
+        margin: 14px 0 0 0;
+        padding: 14px 0 0 0;
+      }
     </style>
   </head>
   <body>
@@ -33,8 +45,8 @@
     </form>
     <% @messages.each do |message| %>
     <div class="message">
-      <p class="date"><%= message.created_at.strftime("%d") %></p>
       <p class="body"><%=escape_html message.body %></p>
+      <p class="date"><%= message.created_at.strftime("%A %B #{message.created_at.day}, %Y at %H:%M") %></p>
     </div>
     <% end %>
   </body>
