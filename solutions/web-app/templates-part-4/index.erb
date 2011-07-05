@@ -26,6 +26,10 @@
         margin: 14px 0 0 0;
         padding: 14px 0 0 0;
       }
+      .invalid label
+      {
+        color: #d00;
+      }
     </style>
   </head>
   <body>
@@ -35,8 +39,12 @@
       of the course and what's your least favorite?
     </p>
     <form action="/" method="post">
-      <div>
-        <div><label for="message_body">Your message</label></div>
+      <div<%= @message.errors.on(:body) ? ' class="invalid"' : '' %>>
+        <% if @message.errors.on(:body) %>
+          <div><label for="message_body"><%= @message.errors.on(:body) %></label></div>
+        <% else %>
+          <div><label for="message_body">Your message</label></div>
+        <% end %>
         <textarea type="text" name="message[body]" id="message_body" cols="30" rows="3"><%= @message.body %></textarea>
       </div>
       <div>
