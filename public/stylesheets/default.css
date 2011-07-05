@@ -58,11 +58,25 @@ code
 
 /* Misc */
 
-.help
+div.help,
+p.help,
+pre.help
 {
   border: 1px solid #ddd;
   background-color: #eee;
-  padding: 0 14px 14px 14px;
+}
+pre.help,
+div.help
+{
+  padding: 14px;
+  margin-top: 14px;
+}
+p.help
+{
+  padding: 14px;
+}
+div.help pre
+{
   margin-top: 14px;
 }
 .clear

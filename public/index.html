@@ -88,7 +88,7 @@ Content-Type: text/html</code></pre></div>
         store them. Maybe you can define a <code>Request</code> or <code>Response</code> class?
       </p>
       
-      <h4>1.5. Bonus: Writing unit tests</h4>
+      <h4>1.5. Bonus: Writing automated tests</h4>
       
       <p>
         For extra bonus points you can try to write automated tests for your code using the examples
@@ -104,9 +104,7 @@ Content-Type: text/html</code></pre></div>
       </p>
       
       <div class="help">
-        <p>
-          Install the <tt>chunky_png</tt> library, preferably with Rubygems.
-        </p>
+        Install the <tt>chunky_png</tt> library, preferably with Rubygems.
         
         <pre><code>$ gem install chunky_png</code></pre>
         
@@ -152,7 +150,7 @@ Content-Type: text/html</code></pre></div>
         For extra points try to render a sine using a sine function on a larger image.
       </p>
       
-      <h4>2.5. Bonus: Writing unit tests</h4>
+      <h4>2.5. Bonus: Writing automated tests</h4>
       
       <p>
         How would you go about writing automated tests for the rendered image? What are the pros
@@ -179,10 +177,10 @@ Content-Type: text/html</code></pre></div>
         It's also a quick way to learn Sinatra.
       </p>
       
-      <h4>3.1. Rendering a frontpage</h4>
+      <h4>3.1. Rendering a front page</h4>
       
       <p>
-        Render a frontpage with a title when someone visits your website on the root <code>/</code>.
+        Render a front page with a title when someone visits your website on the root <code>/</code>.
       </p>
       
       <p><img src="images/wa-part-1.png"></p>
@@ -198,12 +196,34 @@ Content-Type: text/html</code></pre></div>
         instructions.
       </p>
       
-      <div class="help">
-        <p></p>
-        <pre><code>$ gem install datamapper dm-sqlite-adapter</code></pre>
-      </div>
+      <pre class="help"><code>$ gem install datamapper dm-sqlite-adapter</code></pre>
       
       <p><img src="images/wa-part-2.png"></p>
+      
+      <h4>3.3. Showing the messages</h4>
+      
+      <p>
+        Show all messages posted by visitors under the form.
+      </p>
+      
+      <h4>3.4. Bonus: don't allow blank messages</h4>
+      
+      <p>
+        If you haven't done this previously, make sure you don't allow blank posts. Show a nice
+        error messages to visitors to remind them of their folly.
+      </p>
+      
+      <h4>3.5. Bonus: writing automated tests</h4>
+      
+      <p>
+        How do you test a web application? Do you test through the whole stack; web server, framework, application code, and rendering engine? How will the way you test impact further development?
+      </p>
+      <p>
+        Try to write a least one functional test for your front page.
+      </p>
+      <p class="help">
+        If you're using Sinatra, you can read <a href="http://www.sinatrarb.com/testing.html">the documentation about testing</a>.
+      </p>
     </div></div>
   </body>
 </html>
